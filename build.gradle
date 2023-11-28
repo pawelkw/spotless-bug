@@ -1,0 +1,13 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.7.21" apply false
+    id "com.diffplug.spotless" version "6.23.0" apply false
+}
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+	apply from: "${rootProject.projectDir}/subproject.gradle"
+}
+

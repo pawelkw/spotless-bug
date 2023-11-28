@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'com.diffplug.spotless'
+apply from: "${rootProject.projectDir}/jvm.gradle"
+
+repositories {
+    mavenCentral()
+}
+
+spotless {
+    kotlin {
+        ktlint("1.0.1")
+        target "**/*.kt"
+    }
+}
+
+
